@@ -16,7 +16,7 @@ def get_token(user: User):
     id = get_id(user.email)
     admin = get_admin(id)
 
-    data = {"user_id": id, "admin": admin, "expiration": get_timestamp(7)}
+    data = {"sub": id, "admin": admin, "exp": get_timestamp(7), "iat": get_timestamp()}
     return sign_data(data)
 
 # TODO
