@@ -1,11 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from ..dependencies import sign_data, get_id, get_admin, get_timestamp
-
-from pydantic import BaseModel
-
-class User(BaseModel):
-    email: str
-    password: str
+from ..models.user import User
 
 router = APIRouter()
 
