@@ -1,8 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from ..dependencies import sign_data, get_id, get_admin, get_timestamp
-from ..models.user import User
+from ..models.db import User
 from bcrypt import checkpw, gensalt, hashpw
-from ..db import db
+from ..db import get_user_by_username
+m ..models.user import User
+
 
 router = APIRouter()
 
