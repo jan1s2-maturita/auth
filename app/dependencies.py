@@ -3,13 +3,6 @@ from .config import PRIVATE_KEY_PATH
 from datetime import datetime, timedelta
 import math
 
-# TODO
-def get_id(email: str) -> int:
-    return 1
-
-# TODO
-def get_admin(id: int) -> bool:
-    return True
 
 def sign_data(data):
     with open(PRIVATE_KEY_PATH, "rb") as private_key_file:
