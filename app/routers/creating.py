@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from ..dependencies import sign_data, get_id, get_admin, get_timestamp
+from ..dependencies import sign_data, get_timestamp
 from ..models.db import User
 from bcrypt import checkpw, gensalt, hashpw
 from ..db import db
