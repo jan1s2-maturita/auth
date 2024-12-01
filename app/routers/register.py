@@ -6,6 +6,6 @@ router = APIRouter()
 
 @router.post("/register")
 def register(user: UserRegister):
-    db.add_user(email=user.email, password=user.password, username=user.nickname)
+    db.add_user(email=user.email, password=user.password, username=user.username)
     return {"message": "User created"}
 
