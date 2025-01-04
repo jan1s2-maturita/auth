@@ -16,4 +16,4 @@ def get_token(userLogin: UserLogin):
     admin = user.get_is_admin()
 
     data = {"sub": id, "admin": admin, "exp": get_timestamp(7), "iat": get_timestamp()}
-    return sign_data(data)
+    return {"token": sign_data(data)}
